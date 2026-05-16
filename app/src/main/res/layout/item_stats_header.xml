@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#22FFFFFF"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="12dp">
+
+    <TextView
+        android:id="@+id/tv_col_team1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Team 1"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#FFFF6B00"
+        android:gravity="center" />
+
+    <!-- Vertical separator -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#44FFFFFF"
+        android:layout_marginHorizontal="4dp" />
+
+    <TextView
+        android:id="@+id/tv_col_team2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Team 2"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#FFFF8A65"
+        android:gravity="center" />
+
+</LinearLayout>

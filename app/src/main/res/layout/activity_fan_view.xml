@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/score_bg">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/secondary"
+            android:titleTextColor="@color/white"
+            app:subtitleTextColor="@color/accent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondary"
+            app:tabTextColor="#99FFFFFF"
+            app:tabSelectedTextColor="@color/accent"
+            app:tabIndicatorColor="@color/primary"
+            app:tabIndicatorHeight="3dp">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔴 LIVE" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📅 SCHEDULE" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏅 STATS" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- LIVE banner -->
+    <LinearLayout
+        android:id="@+id/lottie_animation"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/live_red"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="● LIVE MATCH IN PROGRESS"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:letterSpacing="0.1" />
+    </LinearLayout>
+
+    <!-- LIVE tab -->
+    <TextView
+        android:id="@+id/tv_no_live"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No live matches right now.\nCheck back soon! 🏆"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="#99FFFFFF"
+        android:padding="48dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_live_scores"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:visibility="visible" />
+
+    <!-- SCHEDULE tab -->
+    <TextView
+        android:id="@+id/tv_no_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No matches scheduled yet. 📅"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="#99FFFFFF"
+        android:padding="48dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:visibility="gone" />
+
+    <!-- STATS tab -->
+    <TextView
+        android:id="@+id/tv_no_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No player stats yet. 🏅"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="#99FFFFFF"
+        android:padding="48dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_stats"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:visibility="gone" />
+
+</LinearLayout>
